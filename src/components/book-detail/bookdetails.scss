@@ -1,0 +1,66 @@
+
+
+.book-details{
+    padding: 5rem 0;
+    height: 100vh;
+
+    .book-details-cont{
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.939), rgba(11, 1, 1, 0.258));
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        padding: 3rem 1rem;
+        border-radius: 30px;
+    }
+
+    a{
+        text-decoration: none;
+        color: goldenrod;
+        margin-bottom: 4rem;
+    }
+
+    .detail-image{
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .detail-content{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @media (min-width:1200px){
+            padding-left: 2rem;
+        }
+        
+
+        @media (max-width: 768px){
+            text-align: center;
+        }
+
+        h3{
+            margin-top: 3rem;
+            color: goldenrod;
+        }
+
+        p:last-child{
+            text-align: justify;
+        }
+
+        span{
+            color: white;
+            font-size: .9rem;
+            font-weight: 200;
+
+            span{
+                color: goldenrod;
+                font-size: 1rem;
+            font-weight: 400;
+            }
+        }
+
+        
+    }
+}

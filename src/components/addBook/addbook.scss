@@ -1,0 +1,49 @@
+
+#addBook{
+    padding-top: 3rem;
+ padding-bottom: 5rem;
+ background: linear-gradient(135deg, rgba(10, 5, 5, 0.914), rgba(67, 39, 39, 0.187));
+ backdrop-filter: blur(5px);
+ -webkit-backdrop-filter: blur(5px);
+        border-bottom: 2px solid rgba(211, 211, 211, 0.328);
+
+    form{
+        .form-control{
+            border: 3px solid rgba(255, 255, 255, 0.575);
+            border-radius: 30px;
+            outline: none;
+            box-shadow: none;
+            background-color: transparent;
+            color: white;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            padding: 1rem 2rem;
+
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.321);
+                font-weight: 200;
+            }
+
+            &:focus{
+                border-color:goldenrod;
+            }
+        }
+
+        .form-label{
+            color: white;
+            font-weight: 200;
+            margin-left: 1.7rem;
+        }
+    }
+
+    button{
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.766);
+        padding: .6rem 3rem;
+        width: 100%;
+
+        &:hover{
+            background-color: goldenrod;
+        }
+    }
+}
