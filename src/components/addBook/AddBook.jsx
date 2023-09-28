@@ -44,6 +44,9 @@ const AddBook = ({ setBooks, books }) => {
       <Container>
         <h1 className='text-center text-light my-5'>BOOK STORE</h1>
         <h4 className='text-center text-white mb-5 fw-light'><small>Add a new book</small></h4>
+        <p className='text-center text-white' style={{fontWeight:"200"}}><em>"Bir kitap, en büyük büyülerden biridir; insanları farklı dünyalara taşır."</em></p>
+        <p className='text-center text-white' style={{fontWeight:"200"}}><em>"A book is one of the greatest spells; it transports people to different worlds."</em></p>
+        <p className='text-white text-center mb-5'><small><em>J.K. Rowling</em></small></p>
         <Form onSubmit={handleSubmit}>
           <Row>
             <Col xs={12} md={3}>

@@ -13,5 +13,13 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
 
 background-image: url("../assets/booksBg.jpeg");
 
+&::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.683);
+    z-index: -1;
+}
+
 }
 

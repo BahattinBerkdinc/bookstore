@@ -18,7 +18,7 @@ const AddedBook = ({isFormValid}) => {
 
   return (
     <div>
-      <Button className='mt-3' type='submit' onClick={notify} disabled={!isFormValid()}> Add Book
+      <Button className='mt-3 ' type='submit' onClick={notify} disabled={!isFormValid()}> Add Book
 </Button>
         <ToastContainer />
     </div>

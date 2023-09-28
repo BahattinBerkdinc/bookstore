@@ -49,6 +49,8 @@ const Booklist = ({setBooks, books}) => {
 
   const filteredBook = books.filter((book) => book.bookname.toLowerCase().includes(searchBook.toLowerCase()));
   console.log(filteredBook);
+
+  const displayBooks = searchBook.trim() === "" || filteredBook.length === 0 ? books : filteredBook;
   
 
   return (
@@ -61,7 +63,7 @@ const Booklist = ({setBooks, books}) => {
           <Form.Control onChange={handleSearch} className='mb-5' type="text" placeholder="Search book" />
         </Form>
       {
-        loading ? <Loader/> : filteredBook.map((book) => (
+        loading ? <Loader/> : displayBooks.map((book) => (
           <Col key={book.id} xs={6} md={4} lg={3} className='mb-5'>
               <div className='book-content h-100'>
                 <div className="img-book">

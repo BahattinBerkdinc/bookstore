@@ -4,6 +4,13 @@
     background: linear-gradient(135deg, rgba(10, 5, 5, 0.706), rgba(255, 255, 255, 0));
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
+
+        .form-control{
+            box-shadow: none;
+            border: none;
+            background-color: rgba(211, 211, 211, 0.786);
+            border-radius: 30px;
+        }
 }
 
 .book-content{

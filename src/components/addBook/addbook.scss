@@ -40,7 +40,11 @@
         background-color: transparent;
         border-color: rgba(255, 255, 255, 0.766);
         padding: .6rem 3rem;
-        width: 100%;
+        min-width: 30%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        border-radius: 30px;
+        cursor: pointer;
 
         &:hover{
             background-color: goldenrod;
