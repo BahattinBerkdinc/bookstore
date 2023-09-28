@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import axios from "axios";
 import "./addbook.scss"
 import AddedBook from '../toast/AddedBook';
@@ -16,6 +16,8 @@ const AddBook = ({ setBooks, books }) => {
 
   const [formData, setFormData] = useState(initialFormData);
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const handleFormData = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -25,7 +27,7 @@ const AddBook = ({ setBooks, books }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://649d59739bac4a8e669d9e74.mockapi.io/api/v1/books", formData);
+      const response = await axios.post(`${apiUrl}/books`, formData);
       setBooks([...books, response.data]);
       setFormData(initialFormData);
     } catch (error) {

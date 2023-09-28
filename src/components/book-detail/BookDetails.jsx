@@ -6,13 +6,12 @@ import { Link } from 'react-router-dom';
 const BookDetails = ({bookId}) => {
 
   const [selectedBook,setSelectedBook] =useState([])
-
-  console.log(bookId);
+  const apiUrl = process.env.REACT_APP_API_URL
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://649d59739bac4a8e669d9e74.mockapi.io/api/v1/books/${bookId}`);
+        const response = await axios.get(`${apiUrl}/books/${bookId}`);
         setSelectedBook(response.data);
       } catch (error) {
         console.error("Error fetching book details:", error);
@@ -20,7 +19,7 @@ const BookDetails = ({bookId}) => {
     };
 
     fetchData();
-  }, [bookId]); 
+  }, [bookId, apiUrl]); 
 
   console.log(selectedBook);
 
