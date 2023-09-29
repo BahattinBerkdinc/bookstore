@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Loader from "../loader/Loader";
+import placeholderBookImage from "../../assets/book-placeholder.jpeg"
 const BookDetails = ({bookId}) => {
 
   
@@ -38,7 +39,7 @@ const BookDetails = ({bookId}) => {
               <Link to='/' > Back </Link>
                 <Col xs={6} lg={3} className='mx-auto'>
                     <div className="detail-image ">
-                    <img className='img-fluid' src={selectedBook.bookImage} alt="" />
+                    <img className='img-fluid' src={selectedBook.bookImage || placeholderBookImage} alt="" />
                     </div>
                 </Col>
                 <Col xs={12} lg={9}>

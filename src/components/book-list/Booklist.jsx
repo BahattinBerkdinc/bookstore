@@ -53,6 +53,9 @@ const Booklist = ({setBooks, books}) => {
   const displayBooks = searchBook.trim() === "" || filteredBook.length === 0 ? books : filteredBook;
   
 
+
+
+
   return (
     <section className="booklist">
     <Container>
@@ -67,7 +70,11 @@ const Booklist = ({setBooks, books}) => {
           <Col key={book.id} xs={6} md={4} lg={3} className='mb-5'>
               <div className='book-content h-100'>
                 <div className="img-book">
-                <img src={book.bookImage ? book.bookImage : bookPlaceholder} alt="" />
+                {book.bookImage ? (
+      <img className='img-fluid' src={book.bookImage} alt="" />
+    ) : (
+      <img className='img-fluid' src={bookPlaceholder} alt="Placeholder" />
+    )}
                 </div>
                 <h3>{book.bookname}</h3>
                 <span>{book.author}</span>
