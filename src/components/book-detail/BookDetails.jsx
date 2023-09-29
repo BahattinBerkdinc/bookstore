@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import Loader from "../loader/Loader";
 const BookDetails = ({bookId}) => {
 
+  
+
   const [selectedBook,setSelectedBook] =useState([])
   const [loading,setLoading] = useState(false);
   const apiUrl = process.env.REACT_APP_API_URL
